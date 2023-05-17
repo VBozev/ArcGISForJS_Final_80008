@@ -8,7 +8,8 @@ body,
 }
 
 #basemap-btn {
-    padding: 6px
+    padding: 6px;
+    cursor: pointer;
 }
 
 #layerList-Btn {
