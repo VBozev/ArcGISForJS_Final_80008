@@ -76,28 +76,28 @@ require([
             toggleButton("layerList")
         })
 
-        document
+    document
         .getElementById("basemap-btn")
-        .addEventListener("click", function() {
+        .addEventListener("click", function () {
             toggleButton("gallery");
         })
 
-        const searchWid = new Search({
-            view: view
-        })
+    const searchWid = new Search({
+        view: view
+    })
 
-        view.ui.add(searchWid, "bottom-left");
+    view.ui.add(searchWid, "bottom-left");
 
     function toggleButton(item) {
-        const layerListEl = document.getElementsByClassName("esri-layer-list") [0];
-        const galleryEl = document.getElementsByClassName("esri-basemap-gallery") [0];
+        const layerListEl = document.getElementsByClassName("esri-layer-list")[0];
+        const galleryEl = document.getElementsByClassName("esri-basemap-gallery")[0];
         let currentProp;
 
-        if(item == "layerList") {
-           currentProp = layerListEl.style.getPropertyValue("display");
-           layerListEl.style.setProperty("display", currentProp == "block" ? "none" : "block");
-           galleryEl.style.setProperty("display", "none");
-        } else if(item == "gallery") {
+        if (item == "layerList") {
+            currentProp = layerListEl.style.getPropertyValue("display");
+            layerListEl.style.setProperty("display", currentProp == "block" ? "none" : "block");
+            galleryEl.style.setProperty("display", "none");
+        } else if (item == "gallery") {
             currentProp = galleryEl.style.getPropertyValue("display");
             galleryEl.style.setProperty("display", currentProp == "block" ? "none" : "block");
             layerListEl.style.setProperty("display", "none");
