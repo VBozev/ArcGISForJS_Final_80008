@@ -5,7 +5,7 @@ require([
     "esri/widgets/ScaleBar",
     "esri/widgets/Legend",
     "esri/widgets/Home"
-    
+
 ], (esriConfig, WebMap, MapView, ScaleBar, Legend, Home) => {
     esriConfig.apikey = "AAPKb65e0f9459e54524983d875ea23edb66IPXwyWdAtPXJM6BLx1WnCOHBtU-yslIHaLa2HvstGhbY8KK1_pbrIDvvKuWThivG";
 
@@ -26,4 +26,17 @@ require([
 
     view.ui.add(homeBtn, "top-right");
 
+    const legend = new Legend({
+        view: view
+    })
+
+    view.ui.add(legend, "bottom-right");
+
+    const scalebar = new ScaleBar({
+        view: view,
+        unit: "metric",
+        style: "ruler"
+    })
+
+    view.ui.add(scalebar, "bottom-left");
 })
