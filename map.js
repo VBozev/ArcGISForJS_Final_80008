@@ -48,7 +48,7 @@ require([
 
     const basemapToggle = new BasemapToggle({
         view: view,
-        nextBasemap: "arcgis-imagery"
+        nextBasemap: "satellite"
     })
 
     const basemapGallery = new BasemapGallery({
